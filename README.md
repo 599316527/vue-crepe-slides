@@ -27,6 +27,17 @@ import CrepeSlides from 'vue-crepe-slides'
 
 The array of slide which contains name, nested layers and optional href. See the [sample](demo/slides.json).
 
+Each layer has attributes:
+* `type`: The field indicates type of layer. Avaiable type is `image`, `video`, `text`, `group`.
+* `image`: If type is image, the field indicates image url.
+* `poster`, `video`: If type is video, the fields indicate video poster & source urls.
+* `text`: If type is text, the field indicates text content of the layer.
+* `children`: If type is group, the field indicates an array of nested layers.
+* `styles`: The field indicates static style of the layer. It's just CSS.
+* `transition`: The field indicates timing function & styles of stages of slide animation.
+  - `timing`: Availabe timing functions are defined in [ease-component](https://www.npmjs.com/package/ease-component)
+  - `styles`: Styles of three stages (enter, stay, leave) of slide animation could be specified here. Tween values are computed automatically by the timing function with stage styles. Transform methods have their shorthand writing style. Some values without units of special fields will be appended unit automatically. Value of style could be a expression with predefined variables. Current available variables are `@containerWidth`, `@containerHeight` for all layers and `@duration` for video only.
+
 #### width
 
 The value of width without unit.
