@@ -6,7 +6,7 @@
       {
         "type": "image",
 
-        "image": "/static/albums/range-rover/bg.jpg",
+        "image": "static/albums/range-rover/bg.jpg",
 
         "styles": {
           "height": "100%",
@@ -33,7 +33,7 @@
       {
         "type": "image",
 
-        "image": "/static/albums/range-rover/slogon.png",
+        "image": "static/albums/range-rover/slogon.png",
 
         "styles": {
           "width": 150,
@@ -67,8 +67,8 @@
       {
         "type": "video",
 
-        "poster": "/static/albums/bmw/album.png",
-        "video": "/static/albums/bmw/light.mp4",
+        "poster": "static/albums/bmw/album.png",
+        "video": "static/albums/bmw/light.mp4",
 
         "styles": {
           "width": "100%",
@@ -101,7 +101,7 @@
           {
             "type": "image",
 
-            "image": "/static/albums/bmw/logo.png",
+            "image": "static/albums/bmw/logo.png",
 
             "styles": {
               "width": "140px",
@@ -159,7 +159,7 @@
       {
         "type": "image",
 
-        "image": "/static/albums/lexus/bg.jpg",
+        "image": "static/albums/lexus/bg.jpg",
 
         "styles": {
           "height": "100%",
@@ -185,7 +185,7 @@
       {
         "type": "image",
 
-        "image": "/static/albums/lexus/car.png",
+        "image": "static/albums/lexus/car.png",
 
         "styles": {
           "width": "60%",
@@ -215,7 +215,7 @@
       {
         "type": "image",
 
-        "image": "/static/albums/lexus/flare.png",
+        "image": "static/albums/lexus/flare.png",
 
         "styles": {
           "width": "100%",
@@ -309,7 +309,7 @@
       {
         "type": "image",
 
-        "image": "/static/albums/cartier/bg.jpg",
+        "image": "static/albums/cartier/bg.jpg",
 
         "styles": {
           "height": "100%",
@@ -336,7 +336,7 @@
       {
         "type": "image",
 
-        "image": "/static/albums/cartier/logo.png",
+        "image": "static/albums/cartier/logo.png",
 
         "styles": {
           "width": 150,

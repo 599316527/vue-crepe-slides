@@ -1,5 +1,7 @@
 # Crepe Slides for Vue
 
+[DEMO](https://599316527.github.io/vue-crepe-slides/)
+
 ## Feature
 
 * Stackable layers on single slide
