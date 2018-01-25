@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Crepe Slides for Vue</h1>
     <div class="content">
-      <crepe-slides :slides="slides" :width="width"
+      <crepe-slides :slides="slides" :width="width" :can-play-video="videoSupport"
         :aspect-ratio="16 / 9" :showIndicators="true"></crepe-slides>
     </div>
     <div class="footer">Powered by Kyle</div>
@@ -10,8 +10,9 @@
 </template>
 
 <script>
-import {throttle, clamp} from 'lodash'
+import {throttle, clamp, includes} from 'lodash'
 import CrepeSlides from '../lib/index'
+import {VideoSupportState} from '../lib/index'
 import slidesData from './slides.json'
 
 export default {
@@ -23,6 +24,24 @@ export default {
     return {
       slides: slidesData,
       width: 320
+    }
+  },
+  computed: {
+    videoSupport() {
+      let ua = navigator.userAgent
+      let isMobile = includes(ua, 'Mobile')
+      let isIphone = includes(ua, 'iPhone')
+      let isGoodIos = isIphone && (includes(ua, 'OS 10_') ||  includes(ua, 'OS 11_'))
+      if (isMobile) {
+        if (isGoodIos) {
+          return VideoSupportState.FULL
+        }
+        else if (isIphone) {
+          return VideoSupportState.SEMI
+        }
+        return VideoSupportState.NONE
+      }
+      return VideoSupportState.FULL
     }
   },
   methods: {

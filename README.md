@@ -2,7 +2,7 @@
 
 [DEMO](https://599316527.github.io/vue-crepe-slides/)
 
-## Feature
+## Features
 
 * Stackable layers on single slide
 * Available various media layers
@@ -36,7 +36,7 @@ Each layer has attributes:
 * `styles`: The field indicates static style of the layer. It's just CSS.
 * `transition`: The field indicates timing function & styles of stages of slide animation.
   - `timing`: Availabe timing functions are defined in [ease-component](https://www.npmjs.com/package/ease-component)
-  - `styles`: Styles of three stages (enter, stay, leave) of slide animation could be specified here. Tween values are computed automatically by the timing function with stage styles. Transform methods have their shorthand writing style. Some values without units of special fields will be appended unit automatically. Value of style could be a expression with predefined variables. Current available variables are `@containerWidth`, `@containerHeight` for all layers and `@duration` for video only.
+  - `styles`: Styles of three stages (enter, stay, leave) of slide animation could be specified here. Tween values are computed automatically by the timing function with stage styles. Transform methods have their shorthand writing style. Some values without units of special fields will be appended unit automatically. Value of style could be an expression with predefined dynamic variables. Current available variables are `@containerWidth`, `@containerHeight` for all layers and `@duration` for video only.
 
 #### width
 
@@ -48,11 +48,11 @@ The value of ratio of width and height.
 
 #### can-play-video
 
-Video Layer requires video support on the browser. Three state are defined in [`import {VideoSupportState} from 'vue-crepe-slides/constant'`](lib/video-support-state.js).
+Video Layer requires video support on the browser. Three state are defined in [`import {VideoSupportState} from 'vue-crepe-slides'`](lib/video-support-state.js).
 
 #### interactive-type
 
-Mouse or touch could be specified if the component is only used on PC or mobile devices. Three state are defined in [`import {InteractiveType} from 'vue-crepe-slides/constant'`](lib/interactive-type.js).
+Mouse or touch could be specified if the component is only used on PC or mobile devices. Three state are defined in [`import {InteractiveType} from 'vue-crepe-slides'`](lib/interactive-type.js).
 
 
 ## Build Setup
