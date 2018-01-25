@@ -1,7 +1,7 @@
 {
   "name": "vue-crepe-slides",
   "description": "Crepe Slides for Vue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Kyle <hekai1229@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -9,6 +9,10 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "main": "lib/index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/599316527/vue-crepe-slides"
+  },
   "dependencies": {
     "component-tween": "^1.2.0",
     "ease-component": "^1.0.0",
