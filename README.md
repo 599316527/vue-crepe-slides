@@ -54,6 +54,9 @@ Video Layer requires video support on the browser. Three state are defined in [`
 
 Mouse or touch could be specified if the component is only used on PC or mobile devices. Three state are defined in [`import {InteractiveType} from 'vue-crepe-slides'`](lib/interactive-type.js).
 
+#### active
+
+Index of current active item. (`.sync`)
 
 ## Build Setup
 

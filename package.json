@@ -5,13 +5,13 @@
   "author": "Kyle <hekai1229@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
+    "dev": "cross-env NODE_ENV=development webpack-serve",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "main": "lib/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/599316527/vue-crepe-slides"
+    "type": "git",
+    "url": "https://github.com/599316527/vue-crepe-slides"
   },
   "dependencies": {
     "component-tween": "^1.2.0",
@@ -30,13 +30,14 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.0.5",
-    "css-loader": "^0.28.9",
+    "css-loader": "^1.0.0",
     "file-loader": "^1.1.4",
-    "less": "^2.7.3",
+    "less": "^3.5.3",
     "less-loader": "^4.0.5",
-    "vue-loader": "^13.0.5",
+    "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-serve": "^1.0.4"
   }
 }

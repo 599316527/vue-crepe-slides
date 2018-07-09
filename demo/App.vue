@@ -3,7 +3,13 @@
     <h1>Crepe Slides for Vue</h1>
     <div class="content">
       <crepe-slides :slides="slides" :width="width" :can-play-video="videoSupport"
-        :aspect-ratio="16 / 9" :showIndicators="true"></crepe-slides>
+        :aspect-ratio="16 / 9" :show-indicators="true"
+        :active.sync="currentIndex"></crepe-slides>
+      <div class="control">
+        <span class="button" @click="currentIndex--">-</span>
+        <span class="active">{{ currentIndex }}</span>
+        <span class="button" @click="currentIndex++">+</span>
+      </div>
     </div>
     <div class="footer">Powered by Kyle</div>
   </div>
@@ -23,7 +29,8 @@ export default {
   data () {
     return {
       slides: slidesData,
-      width: 320
+      width: 320,
+      currentIndex: 0
     }
   },
   computed: {
@@ -62,8 +69,10 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Courgette');
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+</style>
 
+<style lang="less">
 html,
 body {
   height: 100%;
@@ -81,6 +90,31 @@ h1 {
 
 .content {
   font-family: sans-serif;
+}
+
+.control {
+  @border-color: #333;
+  border: 1px solid @border-color;
+  border-radius: 3px;
+  display: flex;
+  width: 88px;
+  margin: 20px auto;
+  text-align: center;
+
+  .button {
+    cursor: default;
+    user-select: none;
+    flex: 0 0 20px;
+    &:first-child {
+      border-right: 1px solid @border-color;
+    }
+    &:last-child {
+      border-left: 1px solid @border-color;
+    }
+  }
+  .active {
+    flex: 1 0 30px;
+  }
 }
 
 .crepe-slides {

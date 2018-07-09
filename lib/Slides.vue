@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import {includes} from 'lodash'
+import {includes, clamp} from 'lodash'
 import Tween from 'component-tween'
 import SlidesItem from './Item'
 import VideoSupportState from './video-support-state'
@@ -57,6 +57,10 @@ export default {
       validator(val) {
         return includes(InteractiveType, val)
       }
+    },
+    active: {
+      type: Number,
+      default: 0
     }
   },
   data () {
@@ -100,6 +104,22 @@ export default {
         handlers.touchstart = this.handleTouchStart
       }
       return handlers
+    }
+  },
+  watch: {
+    active: {
+      handler(val) {
+        let active = clamp(val, 0, this.slides.length - 1)
+        if (active !== val && this.activeItemIndex == active) {
+          this.$emit('update:active', active)
+          return
+        }
+        this.activeItemIndex = active
+      },
+      immediate: true
+    },
+    activeItemIndex(newVal, oldVal) {
+      this.$emit('update:active', newVal)
     }
   },
   methods: {
