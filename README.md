@@ -1,4 +1,6 @@
 # Crepe Slides for Vue
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2F599316527%2Fvue-crepe-slides.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2F599316527%2Fvue-crepe-slides?ref=badge_shield)
+
 
 [DEMO](https://599316527.github.io/vue-crepe-slides/)
 
@@ -72,3 +74,7 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2F599316527%2Fvue-crepe-slides.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2F599316527%2Fvue-crepe-slides?ref=badge_large)
